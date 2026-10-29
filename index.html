@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FixKaro – Home Services at Your Doorstep</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">🛠️ Fix<span>Karo</span></a>
+    <nav id="menu">
+      <a href="#services">Services</a><a href="#how">How it works</a><a href="#book">Book</a>
+      <a href="#history">My Bookings</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" title="Toggle theme">🌙</button>
+      <button class="icon-btn burger" id="burger" title="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill"></span>
+        <h1>Home services, <em>sorted</em> in minutes.</h1>
+        <p>Verified professionals for plumbing, electrical, AC, cleaning and more. Transparent pricing, live status tracking.</p>
+        <div class="search">
+          <input id="search" placeholder="Search a service, e.g. AC, plumber...">
+          <a class="btn" href="#services">Search</a>
+        </div>
+        <div class="stats">
+        
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="blob">🏠</div><span class="float f1">🚰</span><span class="float f2">💡</span><span class="float f3">❄️</span></div>
+    </div>
+  </section>
+
+  <section id="services"><div class="wrap">
+    <h2 class="title">Our services</h2><p class="sub">Pick a service to start your booking.</p>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="serviceGrid"></div>
+  </div></section>
+
+  <section id="how" class="alt"><div class="wrap">
+    <h2 class="title">How it works</h2>
+    <div class="grid three">
+      <div class="how"><i>1</i><h3>Choose a service</h3><p>Browse and select what you need fixed.</p></div>
+      <div class="how"><i>2</i><h3>Pick a pro &amp; slot</h3><p>Compare ratings, choose date and time.</p></div>
+      <div class="how"><i>3</i><h3>Track &amp; relax</h3><p>Follow your booking status live.</p></div>
+    </div>
+  </div></section>
+
+  <section id="book"><div class="wrap">
+    <h2 class="title">Book a service</h2><p class="sub">Fill the details and see your price instantly.</p>
+    <div class="booking">
+      <div class="box">
+        <div class="err" id="formNote"></div>
+        <label>Choose your professional</label>
+        <div class="techs" id="techs"></div>
+        <div class="row">
+          <div><label for="name">Full name</label><input id="name" placeholder="Rahul Sharma"><div class="err" id="e-name"></div></div>
+          <div><label for="phone">Phone</label><input id="phone" inputmode="numeric" maxlength="10" placeholder="9876543210"><div class="err" id="e-phone"></div></div>
+        </div>
+        <div class="row">
+          <div><label for="date">Date</label><input type="date" id="date"><div class="err" id="e-date"></div></div>
+          <div><label for="time">Time slot</label><select id="time"><option>09:00 AM</option><option>11:00 AM</option><option>01:00 PM</option><option>03:00 PM</option><option>05:00 PM</option></select></div>
+        </div>
+        <div class="row">
+          <div><label for="hours">Estimated hours</label><select id="hours"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+          <div><label for="coupon">Coupon (try FIRST10)</label><input id="coupon" placeholder="FIRST10"><div class="err" id="e-coupon"></div></div>
+        </div>
+        <label for="address">Address</label><textarea id="address" rows="2" placeholder="House no, street, area, city"></textarea>
+        <div class="err" id="e-address"></div>
+        <label class="check"><input type="checkbox" id="urgent"> Emergency / same-day service (+25%)</label>
+      </div>
+      <aside class="box sticky">
+        <h3>Price estimate</h3>
+        <div id="chosen" class="muted">Select a service first.</div>
+        <ul class="est" id="est"></ul>
+        <button class="btn block" id="bookBtn">Confirm booking</button>
+        <p class="muted small">Final price may vary after inspection.</p>
+      </aside>
+    </div>
+  </div></section>
+
+  <section id="history" class="alt"><div class="wrap">
+    <div class="head-row"><h2 class="title">My bookings</h2><button class="btn ghost small" id="clearAll">Clear all</button></div>
+    <div id="list"></div>
+  </div></section>
+
+  <section id="reviews"><div class="wrap">
+    <h2 class="title">What customers say</h2>
+    <div class="grid three">
+      <div class="review"><p>"Plumber arrived within an hour and fixed the leak. Price matched the estimate."</p><b>Neha, Delhi</b><span>★★★★★</span></div>
+      <div class="review"><p>"Very easy to book an AC service. Status tracking is a great feature."</p><b>Amit, Noida</b><span>★★★★★</span></div>
+      <div class="review"><p>"Professional electrician, clean work. Will book again."</p><b>Pooja, Gurugram</b><span>★★★★☆</span></div>
+    </div>
+  </div></section>
+
+  <section id="faq" class="alt"><div class="wrap narrow">
+    <h2 class="title">Frequently asked questions</h2>
+    <details><summary>How is the price calculated?</summary><p>Visit charge + hourly labour, plus 18% GST. Emergency bookings add 25%.</p></details>
+    <details><summary>Can I cancel a booking?</summary><p>Yes, you can cancel from My Bookings any time before the job is completed.</p></details>
+    <details><summary>Are the professionals verified?</summary><p>All professionals go through ID and skill verification before joining.</p></details>
+    <details><summary>Where is my data stored?</summary><p>In this demo, bookings are saved in your browser (localStorage).</p></details>
+  </div></section>
+</main>
+
+<footer><div class="wrap">© 2026 FixKaro · Demo project built with HTML, CSS &amp; JavaScript</div></footer>
+<div class="toast" id="toast"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
